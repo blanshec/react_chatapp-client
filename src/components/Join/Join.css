@@ -1,0 +1,15 @@
+.join__outer-container {
+  background-color: rebeccapurple;
+}
+
+.join__inner-container {
+  background-color: rosybrown;
+}
+
+.join__input {
+  background-color: seagreen;
+}
+
+.join_button {
+  margin: 20px;
+}
