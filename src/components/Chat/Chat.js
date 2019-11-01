@@ -27,6 +27,10 @@ const Chat = ({ location }) => {
     setName(name);
     setRoom(room);
 
+    socket.on('roomData', ({ users }) => {
+      setUsers(users);
+    })
+
     socket.emit('join', { name, room }, (error) => {
       if (error) {
         alert(error);
@@ -41,7 +45,7 @@ const Chat = ({ location }) => {
 
     socket.on('roomData', ({ users }) => {
       setUsers(users);
-    });
+    })
 
     return () => {
       socket.emit('disconnect');

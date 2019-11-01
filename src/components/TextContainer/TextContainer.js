@@ -8,23 +8,21 @@ const TextContainer = ({ users }) => (
   <div className="text-container">
     <div>
       <h1>React Socket.io chat application</h1>
-      <h2>Created with tears</h2>
-      <h2>Try it out!</h2>
+      <h2>Created with tears for your enjoyment</h2>
     </div>
 
+    {console.log(users)}
     {
       users
         ? (
           <div>
-            <h1>
-              People currently in the room:
-          </h1>
-            <div className="text-container_active">
+            <h1>People currently chatting:</h1>
+            <div className="active-container">
               <h2>
                 {users.map(({ name }) => (
                   <div key={name} className="active-item">
+                    <img alt="Online Icon" src={onlineIcon} />
                     {name}
-                    <image alt="online icon" src={onlineIcon} />
                   </div>
                 ))}
               </h2>

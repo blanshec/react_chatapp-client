@@ -15,9 +15,10 @@ const Message = ({ message: { user, text }, name }) => {
     isSentByCurrentUser
       ? (
         <div className="message__container_current-user">
-          <p className="sentText">{trimmedName}</p>
+          <p className="sent-text">{trimmedName}</p>
           <div className="message__box_current-user">
             <p className="message__text_current-user">{text}</p>
+            <p className="message__timestamp_current-user">{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
           </div>
         </div>
       )
@@ -25,8 +26,9 @@ const Message = ({ message: { user, text }, name }) => {
         <div className="message__container_other-user">
           <div className="message__box_other-user">
             <p className="message__text_other-user">{text}</p>
+            <p className="message__timestamp_other-user">{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
           </div>
-          <p className="sentText">{user}</p>
+          <p className="sent-text">{user}</p>
         </div>
       )
   );

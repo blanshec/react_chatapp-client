@@ -1,0 +1,38 @@
+.infobar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2c68fa;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  width: 100%;
+}
+
+.infobar__inner-container_left {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  color: white;
+}
+
+.infobar__inner-container_right {
+  display: flex;
+  flex: 0.5;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.online-icon {
+  margin-right: 5%;
+  
+  width: 10px;
+  height: 10px;
+}
+
+.close-icon {
+  margin-right: 5%;
+  
+  width: 25px;
+  height: 25px;
+}
